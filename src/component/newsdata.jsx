@@ -11,7 +11,7 @@ export const NewsMain = () => {
   const handleNewsData = async (searchQuery) => {
     try {
       const url = searchQuery
-        ? `https://newsapi.org/v2/everything?qInTitle=${this.props.searchQuery}&apiKey=1f75fdb1ac9645af8d3e176292ac7907`
+        ? `https://newsapi.org/v2/everything?qInTitle=${searchQuery}&apiKey=1f75fdb1ac9645af8d3e176292ac7907`
         : `https://newsapi.org/v2/everything?q=Indonesia&apiKey=1f75fdb1ac9645af8d3e176292ac7907`;
       const res = await axios.get(url);
       //   console.log(res.data.articles);
